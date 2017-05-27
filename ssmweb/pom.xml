@@ -13,6 +13,24 @@
     <dependencies>
         <dependency>
             <groupId>com.ch</groupId>
+            <artifactId>cartmgr</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.ch</groupId>
+            <artifactId>ordermgr</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.ch</groupId>
+            <artifactId>storemgr</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.ch</groupId>
             <artifactId>customermgr</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>war</type>
@@ -22,12 +40,6 @@
             <artifactId>goodsmgrweb</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>war</type>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
@@ -46,6 +58,18 @@
                         <overlay>
                             <groupId>com.ch</groupId>
                             <artifactId>goodsmgrweb</artifactId>
+                        </overlay>
+                        <overlay>
+                            <groupId>com.ch</groupId>
+                            <artifactId>cartmgr</artifactId>
+                        </overlay>
+                        <overlay>
+                            <groupId>com.ch</groupId>
+                            <artifactId>ordermgr</artifactId>
+                        </overlay>
+                        <overlay>
+                            <groupId>com.ch</groupId>
+                            <artifactId>storemgr</artifactId>
                         </overlay>
                     </overlays>
                 </configuration>

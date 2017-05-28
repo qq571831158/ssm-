@@ -1,23 +1,18 @@
 package com.ch.customermgr.model;
 
+import com.ch.common.model.BaseModel;
+
 /**
  * Created by apple on 2017/5/26.
  */
-public class CustomerModel {
-    private Integer uuid;
+public class CustomerModel extends BaseModel{
     private String customerId;
     private String pwd;
     private String showName;
     private String trueName;
     private String registerTime;
 
-    public Integer getUuid() {
-        return uuid;
-    }
 
-    public void setUuid(Integer uuid) {
-        this.uuid = uuid;
-    }
 
     public String getCustomerId() {
         return customerId;
@@ -59,25 +54,11 @@ public class CustomerModel {
         this.registerTime = registerTime;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        CustomerModel that = (CustomerModel) o;
-
-        return uuid.equals(that.uuid);
-    }
-
-    @Override
-    public int hashCode() {
-        return uuid.hashCode();
-    }
 
     @Override
     public String toString() {
         return "CustomerModel{" +
-                "uuid=" + uuid +
+                "uuid=" + super.getUuid() +
                 ", customerId='" + customerId + '\'' +
                 ", pwd='" + pwd + '\'' +
                 ", showName='" + showName + '\'' +
